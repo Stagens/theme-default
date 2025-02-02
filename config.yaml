@@ -1,0 +1,27 @@
+---
+theme:
+  name: default
+  title: Default
+  description: Default theme for stagen
+  version: 1.0.0
+  author:
+    name: Denis Ivanov
+    website: https://den4k.space
+includes:
+  head:
+    - includes/head
+  head_after:
+    - includes/head_after
+  nav:
+    - includes/nav
+  body_after:
+    - includes/body_after
+  footer:
+    - includes/footer
+preconnect_links:
+  - url: https://fonts.googleapis.com
+  - url: https://fonts.gstatic.com
+    crossorigin: true
+extra_css:
+  - https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap
+  - /theme.default.css
