@@ -7,5 +7,12 @@ if (copyrightYear > 0 && copyrightYear < currentYear) {
 }
 copyrightYears.push(currentYear)
 </script>@}
-<div class="footer-copyright">&copy; Copyright {{ copyrightYears.join("-") }}, {{ settings.site.title }}</div>
-<div class="footer-stagen">Made with <a href="https://github.com/stagens/stagen" target="_blank">stagen</a></div>
+<div class="footer-copyright">
+    &copy; Copyright {{ copyrightYears.join("-") }}, {{ settings.site.title }}
+</div>
+<div class="footer-extra">
+    {% include "includes/footer_extra" %}
+</div>
+<div class="footer-stagen">
+    Made with <a href="https://github.com/stagens/stagen" target="_blank">stagen</a>
+</div>

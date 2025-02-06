@@ -658,8 +658,12 @@ footer {
     font-size: 13px;
 }
 
+.footer-extra {
+    font-size: 13px;
+}
+
 .footer-stagen {
-    font-size: 12px;
+    font-size: 13px;
 }
 
 /*** [ SCREEN SPECIFIC ] **********************************************************************************************/
@@ -710,6 +714,15 @@ footer {
         width: 100%;
         margin: 0;
         padding: 8px 0;
+    }
+
+    footer {
+        display: block;
+    }
+
+    .footer-copyright, .footer-extra, .footer-stagen {
+        text-align: center;
+        margin-top: 4px;
     }
 }
 
