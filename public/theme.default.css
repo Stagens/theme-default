@@ -414,6 +414,10 @@ a:hover {
     text-decoration: none;
 }
 
+a.active {
+    font-weight: bold;
+}
+
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     text-decoration: none;
 }
@@ -433,12 +437,10 @@ button, .button, [type=submit] {
 }
 
 button.highlight, .button.highlight, [type=submit].highlight {
-    /* @todo!!! */
     background-color: yellow;
 }
 
 button.active, .button.active, [type=submit].active {
-    /* @todo!!! */
     font-weight: bold;
 }
 
@@ -660,6 +662,32 @@ footer {
 
 .footer-extra {
     font-size: 13px;
+}
+
+.footer-extra ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-extra ul li {
+    margin: 0;
+    padding: 0;
+    padding-right: 8px;
+    list-style: none;
+    display: inline-block;
+}
+
+.footer-extra ul li:after {
+    content: "•";
+    padding-left: 8px;
+}
+
+.footer-extra ul li:last-child:after {
+    content: "";
+}
+
+.footer-extra ul li:last-child {
+    padding-right: 0;
 }
 
 .footer-stagen {
