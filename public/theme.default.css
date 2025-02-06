@@ -629,13 +629,13 @@ main {
 
 /*** [ SECTION ] ******************************************************************************************************/
 
-article.card {
+section.card {
     margin-top: 32px;
     margin-bottom: 16px;
     padding: 32px;
 }
 
-article.card h1 {
+section.card h1 {
     margin: 0;
     padding: 0;
     padding-bottom: 16px;

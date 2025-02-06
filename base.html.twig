@@ -1,8 +1,8 @@
 {% extends "_layout" %}
 
 {% block main %}
-<article class="card">
+<section class="card">
     {% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
     {% block content %}{% endblock %}
-</article>
+</section>
 {% endblock %}
