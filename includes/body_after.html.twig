@@ -1,4 +1,4 @@
-{% for js in settings.extras.js %}
+{% for js in extras.js %}
 {% set url = css %}
     {% if url.endsWith(".js") %}
         {% do url = url + "?" + gen_time %}

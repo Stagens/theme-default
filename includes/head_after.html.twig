@@ -1,11 +1,11 @@
-{% for link in settings.extras.preconnect_links %}
+{% for link in extras.preconnect_links %}
     {% if link.crossorigin %}
         <link rel="preconnect" href="{{ link.url }}" crossorigin>
     {% else %}
         <link rel="preconnect" href="{{ link.url }}">
     {% endif %}
 {% endfor %}
-{% for css in settings.extras.css %}
+{% for css in extras.css %}
     {% set url = css %}
     {% if url.endsWith(".css") %}
         {% do url = url + "?" + gen_time %}
