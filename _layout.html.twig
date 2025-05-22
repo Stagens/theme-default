@@ -5,7 +5,11 @@
     {{ includes(page.includes.head) }}
     {{ includes(page.includes.head_after) }}
 </head>
-<body>
+{% if pagefind_ignore %}
+<body data-pagefind-ignore>
+{% else %}
+<body data-pagefind-body>
+{% endif %}
 {% block body %}
     {{ includes(page.includes.body_before) }}
     {{ includes(page.includes.header_before) }}
