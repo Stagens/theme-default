@@ -1,4 +1,12 @@
 ---
+theme:
+  name: default
+  title: Default
+  description: Default theme for stagen
+  version: 1.0.0
+  author:
+    name: Denis Ivanov
+    website: https://den4k.space
 includes:
   head:
     - includes/head
