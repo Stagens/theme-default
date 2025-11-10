@@ -1,5 +1,5 @@
 {% for js in extras.js %}
-{% set url = css %}
+{% set url = js %}
     {% if url.endsWith(".js") %}
         {% do url = url + "?" + gen_time %}
     {% endif %}
