@@ -474,11 +474,15 @@ button:hover, .button:hover, [type=submit]:hover {
     font-family: "Inter Tight", sans-serif;
     padding: 6px 12px 6px 12px;
     font-weight: 600;
-    font-size: 12px;
+    /*font-size: 12px;*/
     display: inline-flex;
     align-items: center;
     line-height: 1;
     transition: all 0.5s ease-in-out;
+}
+
+.badge {
+    background: #f5f5f5;
 }
 
 .badge.badge-red {
