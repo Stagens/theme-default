@@ -674,21 +674,34 @@ footer {
     padding-bottom: 16px;
     max-width: 1000px;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+    gap: 16px;
+}
+
+.footer-rights {
+    flex: 1 1 100%;
+    font-size: 80%;
 }
 
 .footer-copyright {
+    flex: 1;
+    text-align: left;
     font-size: 13px;
 }
 
 .footer-stagen {
+    flex: 1;
+    text-align: right;
     font-size: 12px;
 }
 
-.footer-rights {
-    font-size: 80%;
+@media only screen and (max-width: 600px) {
+    .footer-copyright, .footer-stagen  {
+        flex: 1 1 100%;
+        text-align: left;
+    }
 }
 
 /*** [ SCREEN SPECIFIC ] **********************************************************************************************/
