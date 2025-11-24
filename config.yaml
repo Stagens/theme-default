@@ -1,30 +1,34 @@
 ---
-theme:
-  name: default
-  title: Default
-  description: Default theme for stagen
-  version: 1.0.0
-  author:
-    name: Denis Ivanov
-    website: https://den4k.space
+name: default
+title: Stagen Default Theme
+author:
+  name: Denis Vidog
+  email: github@doubleds.ru
+  website: https://den4k.space
+default_layout: base
+imports:
+  imports:
+    - name: main
 includes:
   head:
-    - includes/head
+    - name: head
   head_after:
-    - includes/head_after
+    - name: head_after
   nav:
-    - includes/nav
+    - name: nav
   body_after:
-    - includes/body_after
+    - name: body_after
   footer:
-    - includes/footer
-preconnect_links:
-  - url: https://fonts.googleapis.com
-  - url: https://fonts.gstatic.com
-    crossorigin: true
-extra_css:
-  - https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap
-  - /theme.default.css
+    - name: footer
+extras:
+  preconnect_links:
+    - url: https://fonts.googleapis.com
+    - url: https://fonts.gstatic.com
+      options:
+        crossorigin: true
+  css:
+    - url: https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap
+    - url: /css/theme.default.css
 variables:
   pagefind_ignore: false
   no_title: false
