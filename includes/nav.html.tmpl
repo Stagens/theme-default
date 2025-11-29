@@ -9,6 +9,7 @@
   </div>
 
   <div class="menu">
+    {{- if .Databases.main_menu }}
     <input id="nav_burger" type="checkbox" class="show">
     <label for="nav_burger">🍔</label>
 
@@ -26,5 +27,6 @@
         </li>
       {{ end -}}
     </ul>
+    {{ end -}}
   </div>
 {{ end -}}
