@@ -1,10 +1,10 @@
 {{- define "nav" }}
   <div class="brand">
     <a href="/">
-{{/*      {% if !settings.site.logo.is_hidden %}*/}}
-{{/*      <img alt="{{ settings.site.title }}" src="{{ settings.site.logo.url }}"/>*/}}
-{{/*      {% endif %}*/}}
-{{/*      <span>{{ settings.site.title }}</span>*/}}
+      {{ if .Site.Logo.Url }}
+        <img alt="{{ .Site.Name }}" src="{{ .Site.Logo.Url }}"/>
+      {{ end }}
+      <span>{{ .Site.Name }}</span>
     </a>
   </div>
 
@@ -13,32 +13,18 @@
     <label for="nav_burger">🍔</label>
 
     <ul>
-{{/*      {% for menu_item in databases.main_menu.data %}*/}}
-{{/*      {% set url = menu_item.url %}*/}}
-{{/*      {% set classNames = ["button"] %}*/}}
-{{/*      {% set target = "_self" %}*/}}
-{{/*      {% if menu_item.page %}*/}}
-{{/*      {% set p = pages[menu_item.page] %}*/}}
-{{/*      {% if !p %}*/}}
-{{/*      {@ continue @}*/}}
-{{/*      {% endif %}*/}}
-{{/*      {% do url = p.uri %}*/}}
-{{/*      {% endif %}*/}}
-{{/*      {% if menu_item.highlight %}*/}}
-{{/*      {% do classNames.push("highlight") %}*/}}
-{{/*      {% endif %}*/}}
-{{/*      {% if url == page.uri %}*/}}
-{{/*      {% do classNames.push("active") %}*/}}
-{{/*      {% endif %}*/}}
-{{/*      {% if menu_item.external %}*/}}
-{{/*      {% do target = "_blank" %}*/}}
-{{/*      {% endif %}*/}}
-{{/*      <li>*/}}
-{{/*        <a href="{{ url }}" class="{{ classNames.join(" ") }}" target="{{ target }}">*/}}
-{{/*          {{ menu_item.title }}*/}}
-{{/*        </a>*/}}
-{{/*      </li>*/}}
-{{/*      {% endfor %}*/}}
+      {{- range .Databases.main_menu.Data }}
+        {{- $page := index $.Pages .page }}
+        {{- $classNames := slice "button" }}
+        {{- $target := "self" }}
+        {{- if eq $page.Uri $.Page.Uri }}{{ $classNames = append $classNames "active" }}{{ end -}}
+        {{- if .external }}{{ $target = "_blank" }}{{ end -}}
+        <li>
+          <a href="{{ $page.Uri }}" class="{{ join $classNames " " }}" target="{{ $target }}">
+            {{ $page.Title | default .title }}
+          </a>
+        </li>
+      {{ end -}}
     </ul>
   </div>
 {{ end -}}
