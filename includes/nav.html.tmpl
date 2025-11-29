@@ -17,7 +17,7 @@
       {{- range .Databases.main_menu.Data }}
         {{- $page := index $.Pages .page }}
         {{- $classNames := slice "button" }}
-        {{- $target := "self" }}
+        {{- $target := "" }}
         {{- if eq $page.Uri $.Page.Uri }}{{ $classNames = append $classNames "active" }}{{ end -}}
         {{- if .external }}{{ $target = "_blank" }}{{ end -}}
         <li>
